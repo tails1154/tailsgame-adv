@@ -1,0 +1,56 @@
+{
+    "platforms": [
+        {
+            "x": 58,
+            "y": 507,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 171,
+            "y": 508,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 283,
+            "y": 509,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 406,
+            "y": 507,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 582,
+            "y": 506,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 522,
+            "y": 224,
+            "width": 100,
+            "height": 20,
+            "type": "moving",
+            "range": 500
+        }
+    ],
+    "win_tile": {
+        "x": 558,
+        "y": 156
+    }
+}

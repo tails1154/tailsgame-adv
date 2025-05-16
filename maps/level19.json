@@ -1,0 +1,32 @@
+{
+    "platforms": [
+        {
+            "x": 49,
+            "y": 510,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 189,
+            "y": 511,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 353,
+            "y": 326,
+            "width": 100,
+            "height": 20,
+            "type": "moving",
+            "range": 300
+        }
+    ],
+    "win_tile": {
+        "x": 378,
+        "y": 248
+    }
+}

@@ -1,0 +1,216 @@
+{
+    "platforms": [
+        {
+            "x": 29,
+            "y": 529,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 153,
+            "y": 529,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 302,
+            "y": 525,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 433,
+            "y": 528,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 550,
+            "y": 518,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 653,
+            "y": 367,
+            "width": 100,
+            "height": 20,
+            "type": "moving",
+            "range": 100
+        },
+        {
+            "x": 505,
+            "y": 240,
+            "width": 100,
+            "height": 20,
+            "type": "moving",
+            "range": 100
+        },
+        {
+            "x": 326,
+            "y": 235,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 183,
+            "y": 233,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 78,
+            "y": 282,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": -11,
+            "y": 339,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 66,
+            "y": 383,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 154,
+            "y": 413,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 250,
+            "y": 387,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 348,
+            "y": 373,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 432,
+            "y": 382,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 425,
+            "y": 338,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 423,
+            "y": 321,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 413,
+            "y": 284,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 415,
+            "y": 268,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 414,
+            "y": 299,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 414,
+            "y": 299,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 414,
+            "y": 307,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 421,
+            "y": 347,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 422,
+            "y": 354,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        },
+        {
+            "x": 429,
+            "y": 373,
+            "width": 100,
+            "height": 20,
+            "type": "static",
+            "range": 0
+        }
+    ],
+    "win_tile": {
+        "x": 357,
+        "y": 289
+    }
+}
