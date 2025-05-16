@@ -109,7 +109,8 @@ def play_game():
         pygame.K_UP, pygame.K_DOWN
     ]
     input_buffer = []
-
+    pygame.mixer.music.load("images/level.mp3", namehint="mp3")
+    pygame.mixer.music.play()
     while True:
         level_data = load_level(level_index)
         if not level_data:
@@ -357,6 +358,8 @@ def ground_boss_fight(hits):
                     print("Ground Boss defeated!")
                     pygame.mixer.music.stop()
                     HitSfxFinal.play()
+                    pygame.mixer.music.load("images/level.mp3", namehint="mp3")
+                    pygame.mixer.music.play()
                     return
 
         bullets.update()
@@ -497,6 +500,8 @@ def boss_fight(hits):
                 if boss.health <= 0:
                     print("Boss defeated!")
                     pygame.mixer.music.stop()
+                    pygame.mixer.music.load("images/level.mp3", namehint="mp3")
+                    pygame.mixer.music.play()
                     HitSfxFinal.play()
                     return
 
