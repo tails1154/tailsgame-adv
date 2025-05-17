@@ -169,8 +169,9 @@ def play_game():
                         running = False  # Reload
 
                     if event.key == pygame.K_r:
-                        restart_level = True
-                        running = False  # Reload current level
+                        if player.on_ground:
+                            restart_level = True
+                            running = False  # Reload current level
             if player.update(platforms, win_tile):
                 print(f"Level {level_index} complete!")
                 level_index += 1
