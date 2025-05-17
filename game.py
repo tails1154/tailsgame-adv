@@ -28,8 +28,7 @@ pygame.display.set_caption("Platformer Game")
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.image = pygame.Surface((50, 50))
-        self.image.fill(WHITE)
+        self.image = pygame.transform.scale(pygame.image.load("images/player.png").convert_alpha(), (50, 50))
         self.rect = self.image.get_rect()
         self.rect.x = 50
         self.rect.y = SCREEN_HEIGHT - 100
