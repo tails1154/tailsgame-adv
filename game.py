@@ -245,7 +245,7 @@ def play_game():
             level_index += 1
         if level_index == 20:
             ground_boss_fight(3)
-            boss_fight(3)
+            boss_fight(3, wintile=False)
             level_index += 1
         if restart_level:
             continue  # Jump to top of while True to reload level
@@ -409,7 +409,7 @@ def ground_boss_fight(hits):
         pygame.display.flip()
         clock.tick(60)
 
-def boss_fight(hits):
+def boss_fight(hits, wintile=True):
     print("BOSS FIGHT!")
     pygame.mixer.music.load("images/boss.mp3", namehint="mp3")
     pygame.mixer.music.play()
@@ -478,6 +478,7 @@ def boss_fight(hits):
     clock = pygame.time.Clock()
     input_buffer = []
     running = True
+    defeated = False
 
     while running:
         for event in pygame.event.get():
@@ -502,10 +503,16 @@ def boss_fight(hits):
                 if event.key == pygame.K_r:
                     boss_fight(hits)
                     return
-
-        if player.update(platforms, WinTile(0, 0)):  # dummy
-            pass
-
+        if defeated:
+            all_sprites.add(WinTile(500, 500))
+            if player.update(platforms, WinTile(500, 500)):  # dummy
+                pygame.mixer.music.stop()
+                pygame.mixer.music.load("images/level.mp3", namehint="mp3")
+                pygame.mixer.music.play()
+                return
+        else:
+            if player.update(platforms, WinTile(0, 0)):
+                pass
         bullet_timer += 1
         box_timer += 1
         if bullet_timer >= randint(0,900):
@@ -539,13 +546,32 @@ def boss_fight(hits):
                 if boss.health <= 0:
                     print("Boss defeated!")
                     pygame.mixer.music.stop()
-                    pygame.mixer.music.load("images/level.mp3", namehint="mp3")
-                    pygame.mixer.music.play()
+                    # pygame.mixer.music.load("images/level.mp3", namehint="mp3")
+                    # pygame.mixer.music.play()
                     HitSfxFinal.play()
-                    return
+                    pygame.time.wait(3000)
+                    pygame.mixer.music.stop()
+                    pygame.mixer.music.load("images/bossend.mp3", namehint="mp3")
+                    # wowsers
+                    defeated = True
+                    pygame.mixer.music.play()
+                    player.rect.x = 300
+                    player.rect.y = 500
+                    all_sprites = pygame.sprite.Group(player, boss)
+                    bullets = pygame.sprite.Group()
+                    boxes = pygame.sprite.Group()
+                    while pygame.mixer.music.get_busy():
+                        1+1
+                    pygame.mixer.music.load("images/end.mp3", namehint="mp3")
+                    pygame.mixer.music.play()
+                    # jk we are not returning yet unless wintile is false
+                    if not wintile:
+                        return
 
-        bullets.update()
-        boxes.update()
+
+        if not defeated:
+            bullets.update()
+            boxes.update()
 
         screen.fill((50, 50, 100))
         all_sprites.draw(screen)
