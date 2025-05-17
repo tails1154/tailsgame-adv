@@ -12,7 +12,8 @@ MOVEMENT_SPEED = 5
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
-
+global lives
+lives = 5
 # Sfx
 global HitSfx
 global HitSfxFinal
@@ -146,6 +147,7 @@ def play_game():
             all_sprites.add(plat)
 
 
+
         clock = pygame.time.Clock()
         running = True
         restart_level = False
@@ -170,7 +172,6 @@ def play_game():
                     if event.key == pygame.K_r:
                         restart_level = True
                         running = False  # Reload current level
-
             if player.update(platforms, win_tile):
                 print(f"Level {level_index} complete!")
                 level_index += 1
