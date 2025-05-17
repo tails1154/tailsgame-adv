@@ -177,7 +177,46 @@ def play_game():
                 level_index += 1
                 break
             moving_platforms.update()
-
+            if player.rect.y > 1000:
+                global lives
+                pygame.mixer.music.stop()
+                pygame.mixer.music.load("images/death.mp3", namehint="mp3")
+                pygame.mixer.music.play()
+                while pygame.mixer.music.get_busy():
+                    1+1
+                screen.fill("black")
+                my_font = pygame.font.SysFont('Comic Sans MS', 30)
+                lives = lives - 1
+                if lives >= 0:
+                    text_surface = my_font.render('Lives: ' + str(lives), False, (255, 255, 255))
+                    screen.blit(text_surface, (50, 100))
+                    pygame.display.flip()
+                    pygame.time.wait(1000)
+                    print(lives)
+                    screen.fill("black")
+                if lives < 0:
+                    screen.fill("black")
+                    pygame.mixer.music.load("images/over.mp3", namehint="mp3")
+                    pygame.mixer.music.play()
+                    my_font = pygame.font.SysFont("Comic Sans MS", 30)
+                    text_surface = my_font.render("GAME         OVER", False, (255, 255, 255))
+                    screen.blit(text_surface, (400, 100))
+                    pygame.display.flip()
+                    while pygame.mixer.music.get_busy():
+                        1+1
+                    screen.fill("black")
+                    lives = 5
+                    title_screen()
+                    play_game()
+                    restart_level = True
+                    running = False
+                else:
+                    pygame.mixer.music.stop()
+                    pygame.mixer.music.load("images/level.mp3", namehint="mp3")
+                    pygame.mixer.music.play()
+                    restart_level = True
+                    running = False
+                    # lives = lives - 1
             screen.fill((0, 0, 255))
             all_sprites.draw(screen)
             pygame.display.flip()
